@@ -9,6 +9,7 @@ body {
 	display: flex;
 	justify-content: center;
 	background-color: #191816;
+  padding: 2em 0;
 }
 
 h1,h2,h3,h4,h5,h6 {
@@ -62,7 +63,7 @@ att det ska se ut som att kortet vänder sig.
 }
 
 .card-front .card-front-content {
-  border: 1px solid #dfe0df;
+  border: 3px double #8b8b64;
   margin: 15px;
   height: calc(100% - 30px);
   display: -webkit-box;
@@ -78,23 +79,24 @@ att det ska se ut som att kortet vänder sig.
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
+  border-radius: 5px;
 }
 
-.card-front .card-front-content img {
-  max-height: 100px;
-  max-width: 100px;
+.card-front .card-front-content i {
+  font-size: 40px
 }
+
 /* Brown coloured cards */
 .card-front.brown {
   background-color: #2d211d;
 }
 
-.card-front.brown h1 {
+.card-front.brown h1, .card-front.brown i {
   color: #503b34;
 }
 
 .card-front.brown .card-front-content {
-  border: 1px solid #3e322e;
+  border-color: #3e322e;
 }
 
 /* Green coloured cards */
@@ -102,11 +104,11 @@ att det ska se ut som att kortet vänder sig.
   background-color: #324033;
 }
 
-.card-front.green h1 {
+.card-front.green h1, .card-front.green i {
   color: #232b23;
 }
 .card-front.green .card-front-content {
-  border: 1px solid #405041;;
+  border-color: #405041;
 }
 
 /* Yellow coloured cards */
@@ -114,12 +116,12 @@ att det ska se ut som att kortet vänder sig.
   background-color: #7d7d59;
 }
 
-.card-front.yellow h1 {
+.card-front.yellow h1, .card-front.yellow i {
   color: #4e4e30
 }
 
 .card-front.yellow .card-front-content {
-  border: 1px solid #8b8b64;
+  border-color: #8b8b64;
 }
 
 
