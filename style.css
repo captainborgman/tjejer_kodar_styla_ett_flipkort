@@ -8,16 +8,24 @@ Eller varför inte duplicera HTML-koden för att skapa flera kort?
 body {
 	display: flex;
 	justify-content: center;
-	background-color: rgb(255, 243, 221);
+	background-color: #191816;
 }
 
+h1,h2,h3,h4,h5,h6 {
+  font-family: 'Varela Round', sans-serif;
+}
+
+p,a,span {
+  font-family: 'Varela Round', sans-serif;
+}
 /* Det här är stylingen på kortet. Bakgrunden är transparent för
 att det ska se ut som att kortet vänder sig. 
 */
 .card {
 	background-color: transparent;
-	width: 150px;
-  height: 200px;
+	width: 250px;
+  height: 350px;
+  margin: 0 1em;
 
   /* Detta skapar en 3d-effekt på kortet när det vänds*/
 	perspective: 1000px;
@@ -49,18 +57,91 @@ att det ska se ut som att kortet vänder sig.
 
   /* Denna kod döljer framsidan av kortet när det vänds*/
 	backface-visibility: hidden;
-  background-color: hotpink;
+  background-color: #c0ccb2;
   border-radius: 10px;
 }
+
+.card-front .card-front-content {
+  border: 1px solid #dfe0df;
+  margin: 15px;
+  height: calc(100% - 30px);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; 
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.card-front .card-front-content img {
+  max-height: 100px;
+  max-width: 100px;
+}
+/* Brown coloured cards */
+.card-front.brown {
+  background-color: #2d211d;
+}
+
+.card-front.brown h1 {
+  color: #503b34;
+}
+
+.card-front.brown .card-front-content {
+  border: 1px solid #3e322e;
+}
+
+/* Green coloured cards */
+.card-front.green {
+  background-color: #324033;
+}
+
+.card-front.green h1 {
+  color: #232b23;
+}
+.card-front.green .card-front-content {
+  border: 1px solid #405041;;
+}
+
+/* Yellow coloured cards */
+.card-front.yellow {
+  background-color: #7d7d59;
+}
+
+.card-front.yellow h1 {
+  color: #4e4e30
+}
+
+.card-front.yellow .card-front-content {
+  border: 1px solid #8b8b64;
+}
+
 
 .card-back {
 	position: absolute;
 	width: 100%;
   height: 100%;
   border-radius: 10px;
-
+  padding: 15px;
+  background-image: url(media/card_texture.png);
+  background-color: #191816;
   /* Denna kod döljer baksidan av kortet när det vänds*/
 	backface-visibility: hidden;
-	background-color: white;
   transform: rotateY(180deg);
+}
+
+.card-back img {
+  position: absolute;
+  bottom: 0;
+  max-height: 200px;
+}
+
+.card-back h1, .card-back h2, .card-back h3, .card-back h4, .card-back h5, .card-back h6, .card-back a, .card-back span, .card-back p {
+  color: white;
 }
